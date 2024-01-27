@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://dqj1xqe21mvl4"]
+[gd_scene load_steps=2 format=3 uid="uid://dqj1xqe21mvl4"]
+
+[ext_resource type="Texture2D" uid="uid://blt1nbl3anrc8" path="res://icon.svg" id="1_jtvff"]
 
 [node name="GameOver" type="Node"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(102, 69)
+texture = ExtResource("1_jtvff")
