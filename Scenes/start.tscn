@@ -1,3 +1,28 @@
 [gd_scene format=3 uid="uid://c0px4exvdxdm5"]
 
 [node name="Start" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_right = 124.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Control/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "                                            Несмотря на то , что внешне все люди разные , 
+внутри они все одинаковы ,сказал мне"
