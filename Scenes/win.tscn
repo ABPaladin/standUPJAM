@@ -1,10 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbslu0j21h0mr"]
+[gd_scene load_steps=10 format=3 uid="uid://dbslu0j21h0mr"]
 
 [ext_resource type="Script" path="res://Scenes/Control.gd" id="1_dkd2y"]
+[ext_resource type="Texture2D" uid="uid://4wpi0xg1spgp" path="res://assets/scenebackground.png" id="2_i2ony"]
+[ext_resource type="Texture2D" uid="uid://b4wyqlh0ktlqs" path="res://assets/watchers1.png" id="3_kodr7"]
+[ext_resource type="Texture2D" uid="uid://b1emjj0ldqqhx" path="res://assets/watchers2.png" id="4_yophj"]
+[ext_resource type="Texture2D" uid="uid://bgp22xkv1muhu" path="res://assets/asdawdawd.png" id="5_0ysun"]
+[ext_resource type="Texture2D" uid="uid://bn1jxuhv7oqx" path="res://assets/asdawdawd2.png" id="6_3oeth"]
+[ext_resource type="Texture2D" uid="uid://db4xn8g1tg2ao" path="res://assets/button1.png" id="7_1l02u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yk5qw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kodr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yophj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uloet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0ysun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3oeth")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Win" type="Node"]
 
 [node name="Control" type="Control" parent="."]
+show_behind_parent = true
 custom_minimum_size = Vector2(240, 160)
 layout_mode = 3
 anchors_preset = 0
@@ -12,12 +47,38 @@ offset_right = 238.0
 offset_bottom = 157.0
 script = ExtResource("1_dkd2y")
 
+[node name="Scenebackground" type="Sprite2D" parent="Control"]
+position = Vector2(120, 80)
+texture = ExtResource("2_i2ony")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_yk5qw")
+autoplay = "default"
+frame_progress = 0.245241
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(120, 96)
+scale = Vector2(0.762295, 0.735294)
+sprite_frames = SubResource("SpriteFrames_uloet")
+autoplay = "default"
+frame = 1
+frame_progress = 0.7
+
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 72.0
-offset_top = 112.0
-offset_right = 184.0
-offset_bottom = 143.0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 172.0
+offset_bottom = 47.0
 text = " MAIN MENU"
+flat = true
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Button"]
+show_behind_parent = true
+position = Vector2(56, 16)
+scale = Vector2(1.44444, 2.26786)
+texture = ExtResource("7_1l02u")
 
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
