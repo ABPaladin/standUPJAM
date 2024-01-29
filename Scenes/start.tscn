@@ -1,28 +1,45 @@
-[gd_scene format=3 uid="uid://c0px4exvdxdm5"]
+[gd_scene load_steps=6 format=3 uid="uid://c0px4exvdxdm5"]
+
+[ext_resource type="Script" path="res://Scenes/ControlStart.gd" id="1_4guy4"]
+[ext_resource type="FontFile" uid="uid://cohmpanpluue6" path="res://Art/Font/Pixel Millennium.ttf" id="3_33mxh"]
+[ext_resource type="Texture2D" uid="uid://brlhk2gnkr1js" path="res://Art/enviroment/some.png" id="4_fmt6u"]
+[ext_resource type="AudioStream" uid="uid://lsae6fu78ybf" path="res://Audio/Spanish Flea   Herb Alpert.mp3" id="5_dumrf"]
+[ext_resource type="Texture2D" uid="uid://ddpwgrod6jnnx" path="res://Art/enviroment/start.png" id="16_c0f4a"]
 
 [node name="Start" type="Node"]
 
 [node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(240, 160)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+script = ExtResource("1_4guy4")
 
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.8
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -123.0
-offset_right = 124.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(120, 80)
+texture = ExtResource("16_c0f4a")
 
-[node name="Label" type="Label" parent="Control/PanelContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 11
-text = "                                            Несмотря на то , что внешне все люди разные , 
-внутри они все одинаковы ,сказал мне"
+[node name="Button" type="Button" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 136.0
+offset_top = 128.0
+offset_right = 240.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("3_33mxh")
+text = "START"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Button"]
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(51, 15.75)
+scale = Vector2(1.47222, 1.10714)
+texture = ExtResource("4_fmt6u")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dumrf")
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]

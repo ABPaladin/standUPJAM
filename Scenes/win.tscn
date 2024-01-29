@@ -1,0 +1,122 @@
+[gd_scene load_steps=21 format=3 uid="uid://dqj1xqe21mvl4"]
+
+[ext_resource type="Script" path="res://Scenes/ControlLast.gd" id="1_1nh8r"]
+[ext_resource type="Texture2D" uid="uid://dlt1ehx4qndyi" path="res://Art/enviroment/crowd/Untitled_Artwork-1.png" id="2_m67ot"]
+[ext_resource type="Texture2D" uid="uid://88fcc2ir7cpv" path="res://Art/enviroment/background.png" id="2_u8nlv"]
+[ext_resource type="FontFile" uid="uid://cohmpanpluue6" path="res://Art/Font/Pixel Millennium.ttf" id="3_lcwu1"]
+[ext_resource type="Texture2D" uid="uid://brlhk2gnkr1js" path="res://Art/enviroment/some.png" id="3_xhbim"]
+[ext_resource type="Texture2D" uid="uid://dmo6xteemahvo" path="res://Art/enviroment/crowd/Untitled_Artwork-2.png" id="4_4xg4u"]
+[ext_resource type="Texture2D" uid="uid://dup280r2ns4t8" path="res://Art/charachter/comedy/win/1.png" id="6_6lmp0"]
+[ext_resource type="Texture2D" uid="uid://duh6bu3iaawyo" path="res://Art/charachter/comedy/win/2.png" id="7_k5ngb"]
+[ext_resource type="Texture2D" uid="uid://hpyctyaf4k1q" path="res://Art/charachter/comedy/win/3.png" id="8_vfffv"]
+[ext_resource type="Texture2D" uid="uid://c4edbkpv8q7lx" path="res://Art/charachter/comedy/win/4.png" id="9_6t6kw"]
+[ext_resource type="Texture2D" uid="uid://ri0vjmcw7kup" path="res://Art/charachter/comedy/win/5.png" id="10_6prs3"]
+[ext_resource type="Texture2D" uid="uid://cfx30kaisavcu" path="res://Art/charachter/comedy/win/6.png" id="11_tn77c"]
+[ext_resource type="Texture2D" uid="uid://5nkb6jvtg23s" path="res://Art/charachter/comedy/win/7.png" id="12_a5ddc"]
+[ext_resource type="Texture2D" uid="uid://dtk0w2jr446wl" path="res://Art/charachter/comedy/win/8.png" id="13_i2y7x"]
+[ext_resource type="Texture2D" uid="uid://dremw6ifugx75" path="res://Art/charachter/comedy/win/9.png" id="14_72wmj"]
+[ext_resource type="Texture2D" uid="uid://b7vjh3bjh8axq" path="res://Art/charachter/comedy/win/10.png" id="15_7blu2"]
+[ext_resource type="Texture2D" uid="uid://dns4viee0e8ad" path="res://Art/charachter/comedy/win/11.png" id="16_6u5a8"]
+[ext_resource type="Texture2D" uid="uid://b03pre21700jq" path="res://Art/charachter/comedy/win/12.png" id="17_luytg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xoobu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4xg4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m67ot")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ghopf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6lmp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k5ngb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vfffv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6t6kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6prs3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tn77c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a5ddc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_i2y7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_72wmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7blu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6u5a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_luytg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 19.0
+}]
+
+[node name="GameOver" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(240, 160)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+script = ExtResource("1_1nh8r")
+
+[node name="UntitledArtwork" type="Sprite2D" parent="Control"]
+position = Vector2(120, 80)
+texture = ExtResource("2_u8nlv")
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 16.0
+offset_right = 176.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("3_lcwu1")
+text = "MAIN MENU"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Button"]
+show_behind_parent = true
+position = Vector2(51, 15.75)
+scale = Vector2(1.47222, 1.10714)
+texture = ExtResource("3_xhbim")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_xoobu")
+autoplay = "default"
+frame_progress = 0.725105
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_ghopf")
+autoplay = "default"
+frame_progress = 0.603158
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]

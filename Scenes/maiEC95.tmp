@@ -1,0 +1,210 @@
+[gd_scene load_steps=21 format=3 uid="uid://2foc3a47107y"]
+
+[ext_resource type="Texture2D" uid="uid://brlhk2gnkr1js" path="res://Art/enviroment/some.png" id="1_rcqtg"]
+[ext_resource type="Texture2D" uid="uid://ldovoa3va7ly" path="res://Art/enviroment/cloud.png" id="1_vdqtx"]
+[ext_resource type="Script" path="res://Scenes/Control.gd" id="1_ybme5"]
+[ext_resource type="AudioStream" uid="uid://dluuatpf6frkq" path="res://Audio/win110.wav" id="4_x1ppu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j84n"]
+texture = ExtResource("1_rcqtg")
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r0mih"]
+expand_margin_left = 8.0
+expand_margin_top = 10.0
+expand_margin_right = 9.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ale5i"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4cntb"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ixo4"]
+texture = ExtResource("1_vdqtx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhd4x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8srie"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0nbfp"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_232kw"]
+texture = ExtResource("1_vdqtx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g8tij"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_svdwu"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ri7v"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a11hg"]
+texture = ExtResource("1_vdqtx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2q0tk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_srmfi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vggak"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ybme5")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.5
+offset_top = -25.0
+offset_right = 42.5
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/panel = SubResource("StyleBoxTexture_8j84n")
+
+[node name="Label" type="Label" parent="Control/PanelContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_r0mih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.837
+anchor_bottom = 0.194
+offset_left = 35.0
+offset_right = 24.12
+offset_bottom = -1.04
+grow_horizontal = 2
+scale = Vector2(0.9, 0.9)
+
+[node name="ButtonOne" type="Button" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_ale5i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4cntb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7ixo4")
+theme_override_styles/focus = SubResource("StyleBoxTexture_fhd4x")
+
+[node name="ButtonTwo" type="Button" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_8srie")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0nbfp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_232kw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_g8tij")
+
+[node name="ButtonThree" type="Button" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_svdwu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6ri7v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a11hg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_2q0tk")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+texture_filter = 1
+clip_contents = true
+layout_mode = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 12.0
+offset_bottom = 35.0
+scale = Vector2(2.24, 1.8)
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Node2D" type="Node2D" parent="."]
+texture_filter = 1
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_srmfi")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_vggak")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+sprite_frames = SubResource("SpriteFrames_vggak")
+animation = &"new_animation"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_x1ppu")

@@ -1,0 +1,108 @@
+[gd_scene load_steps=17 format=3 uid="uid://bbcymncmv251f"]
+
+[ext_resource type="Script" path="res://Scenes/ControlLast.gd" id="1_u6m33"]
+[ext_resource type="Texture2D" uid="uid://gaq1k5niqkxy" path="res://Art/charachter/comedy/lose/1.png" id="2_kxw0s"]
+[ext_resource type="Texture2D" uid="uid://88fcc2ir7cpv" path="res://Art/enviroment/background.png" id="2_wshwr"]
+[ext_resource type="FontFile" uid="uid://cohmpanpluue6" path="res://Art/Font/Pixel Millennium.ttf" id="3_xsqnf"]
+[ext_resource type="Texture2D" uid="uid://brlhk2gnkr1js" path="res://Art/enviroment/some.png" id="3_y4uhu"]
+[ext_resource type="Texture2D" uid="uid://dlt1ehx4qndyi" path="res://Art/enviroment/crowd/Untitled_Artwork-1.png" id="4_ohjcf"]
+[ext_resource type="Texture2D" uid="uid://dmo6xteemahvo" path="res://Art/enviroment/crowd/Untitled_Artwork-2.png" id="5_858m0"]
+[ext_resource type="Texture2D" uid="uid://ol5j2xvwjp05" path="res://Art/charachter/comedy/lose/2.png" id="7_6kc8h"]
+[ext_resource type="Texture2D" uid="uid://bi5fcaqe7dc33" path="res://Art/charachter/comedy/lose/3.png" id="8_1gosl"]
+[ext_resource type="Texture2D" uid="uid://bc40kxa8dq5x7" path="res://Art/charachter/comedy/lose/4.png" id="9_0sikb"]
+[ext_resource type="Texture2D" uid="uid://d4ardxi4yb41q" path="res://Art/charachter/comedy/lose/5.png" id="10_pg3uc"]
+[ext_resource type="Texture2D" uid="uid://chrcummx3b6p" path="res://Art/charachter/comedy/lose/6.png" id="11_hd07m"]
+[ext_resource type="Texture2D" uid="uid://dpulbfhcw6qby" path="res://Art/charachter/comedy/lose/7.png" id="12_fmied"]
+[ext_resource type="Texture2D" uid="uid://c77qpmv23qkf2" path="res://Art/charachter/comedy/lose/8.png" id="13_g85ui"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vabr8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ohjcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_858m0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l1urf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kxw0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6kc8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1gosl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0sikb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pg3uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hd07m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fmied")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_g85ui")
+}],
+"loop": true,
+"name": &"default",
+"speed": 19.0
+}]
+
+[node name="GameOver" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(240, 160)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+script = ExtResource("1_u6m33")
+
+[node name="UntitledArtwork" type="Sprite2D" parent="Control"]
+position = Vector2(120, 80)
+texture = ExtResource("2_wshwr")
+
+[node name="Button" type="Button" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 136.0
+offset_top = 8.0
+offset_right = 240.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_xsqnf")
+text = "NOT FUNNY 
+ENOUGH"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Button"]
+show_behind_parent = true
+position = Vector2(48, 16)
+scale = Vector2(1.11222, 2.50714)
+texture = ExtResource("3_y4uhu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_vabr8")
+autoplay = "default"
+frame_progress = 0.939502
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(120, 64)
+sprite_frames = SubResource("SpriteFrames_l1urf")
+autoplay = "default"
+frame_progress = 0.765482
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]

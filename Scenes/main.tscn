@@ -1,3 +1,393 @@
-[gd_scene format=3 uid="uid://2foc3a47107y"]
+[gd_scene load_steps=58 format=3 uid="uid://2foc3a47107y"]
+
+[ext_resource type="Texture2D" uid="uid://88fcc2ir7cpv" path="res://Art/enviroment/background.png" id="1_ce2xk"]
+[ext_resource type="Texture2D" uid="uid://dlt1ehx4qndyi" path="res://Art/enviroment/crowd/Untitled_Artwork-1.png" id="1_dyt1p"]
+[ext_resource type="Texture2D" uid="uid://brlhk2gnkr1js" path="res://Art/enviroment/some.png" id="1_rcqtg"]
+[ext_resource type="Texture2D" uid="uid://ldovoa3va7ly" path="res://Art/enviroment/cloud.png" id="1_vdqtx"]
+[ext_resource type="Script" path="res://Scenes/Control.gd" id="1_ybme5"]
+[ext_resource type="Texture2D" uid="uid://dmo6xteemahvo" path="res://Art/enviroment/crowd/Untitled_Artwork-2.png" id="2_1wnqq"]
+[ext_resource type="Texture2D" uid="uid://daivgqfntg6tn" path="res://Art/charachter/comedy/idle/pejioiew-1.png" id="3_ktqc4"]
+[ext_resource type="Texture2D" uid="uid://duv3ytumpgg2j" path="res://Art/charachter/clown/clown.angry11.png" id="4_0a60f"]
+[ext_resource type="Texture2D" uid="uid://cs6u1lig0nesv" path="res://Art/charachter/comedy/idle/pejioiew-2.png" id="4_6b1u5"]
+[ext_resource type="AudioStream" uid="uid://dluuatpf6frkq" path="res://Audio/win110.wav" id="4_x1ppu"]
+[ext_resource type="Texture2D" uid="uid://d1shxfnr03s1b" path="res://Art/charachter/comedy/idle/pejioiew-3.png" id="5_8gmcr"]
+[ext_resource type="Texture2D" uid="uid://ciayac2w00dn5" path="res://Art/charachter/clown/clown.angry.png" id="5_cf6b0"]
+[ext_resource type="Texture2D" uid="uid://b7o5hc1lo8npi" path="res://Art/charachter/clown/clown.happy.png" id="6_5dosm"]
+[ext_resource type="Texture2D" uid="uid://ddn72g6qhfuym" path="res://Art/charachter/comedy/idle/pejioiew-4.png" id="6_mdtvd"]
+[ext_resource type="Texture2D" uid="uid://dl6y14c62am3y" path="res://Art/charachter/comedy/idle/pejioiew-5.png" id="7_o1voi"]
+[ext_resource type="Texture2D" uid="uid://b8372s53cdu68" path="res://Art/charachter/comedy/idle/pejioiew-6.png" id="8_ounxa"]
+[ext_resource type="Texture2D" uid="uid://gaq1k5niqkxy" path="res://Art/charachter/comedy/lose/1.png" id="9_r5u4w"]
+[ext_resource type="Texture2D" uid="uid://ol5j2xvwjp05" path="res://Art/charachter/comedy/lose/2.png" id="10_idvrk"]
+[ext_resource type="Texture2D" uid="uid://bi5fcaqe7dc33" path="res://Art/charachter/comedy/lose/3.png" id="11_hc1r2"]
+[ext_resource type="Texture2D" uid="uid://bc40kxa8dq5x7" path="res://Art/charachter/comedy/lose/4.png" id="12_a200m"]
+[ext_resource type="Texture2D" uid="uid://d4ardxi4yb41q" path="res://Art/charachter/comedy/lose/5.png" id="13_yhw0j"]
+[ext_resource type="Texture2D" uid="uid://chrcummx3b6p" path="res://Art/charachter/comedy/lose/6.png" id="14_4tmt0"]
+[ext_resource type="Texture2D" uid="uid://dpulbfhcw6qby" path="res://Art/charachter/comedy/lose/7.png" id="15_6bjky"]
+[ext_resource type="Texture2D" uid="uid://c77qpmv23qkf2" path="res://Art/charachter/comedy/lose/8.png" id="16_x88cw"]
+[ext_resource type="Texture2D" uid="uid://dup280r2ns4t8" path="res://Art/charachter/comedy/win/1.png" id="21_mt1mc"]
+[ext_resource type="Texture2D" uid="uid://duh6bu3iaawyo" path="res://Art/charachter/comedy/win/2.png" id="22_k2vmy"]
+[ext_resource type="Texture2D" uid="uid://hpyctyaf4k1q" path="res://Art/charachter/comedy/win/3.png" id="23_uu3wo"]
+[ext_resource type="Texture2D" uid="uid://c4edbkpv8q7lx" path="res://Art/charachter/comedy/win/4.png" id="24_h5qc8"]
+[ext_resource type="Texture2D" uid="uid://ri0vjmcw7kup" path="res://Art/charachter/comedy/win/5.png" id="25_rjk84"]
+[ext_resource type="Texture2D" uid="uid://cfx30kaisavcu" path="res://Art/charachter/comedy/win/6.png" id="26_0prom"]
+[ext_resource type="Texture2D" uid="uid://5nkb6jvtg23s" path="res://Art/charachter/comedy/win/7.png" id="27_haih1"]
+[ext_resource type="Texture2D" uid="uid://dtk0w2jr446wl" path="res://Art/charachter/comedy/win/8.png" id="28_14rks"]
+[ext_resource type="Texture2D" uid="uid://dremw6ifugx75" path="res://Art/charachter/comedy/win/9.png" id="29_3cxit"]
+[ext_resource type="Texture2D" uid="uid://b7vjh3bjh8axq" path="res://Art/charachter/comedy/win/10.png" id="30_jyt20"]
+[ext_resource type="Texture2D" uid="uid://dns4viee0e8ad" path="res://Art/charachter/comedy/win/11.png" id="31_cuu2l"]
+[ext_resource type="Texture2D" uid="uid://b03pre21700jq" path="res://Art/charachter/comedy/win/12.png" id="32_j4lmn"]
+[ext_resource type="FontFile" uid="uid://cohmpanpluue6" path="res://Art/Font/Pixel Millennium.ttf" id="35_n87k8"]
+[ext_resource type="AudioStream" uid="uid://qktl7wbhhny8" path="res://Audio/music lian.wav" id="38_x3s8h"]
+[ext_resource type="AudioStream" uid="uid://dkeul3jsl2px7" path="res://Audio/idle_song.wav" id="39_0qdyg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dlo08"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cf6b0")
+}],
+"loop": true,
+"name": &"idle_clown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0a60f")
+}],
+"loop": true,
+"name": &"lose_clown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5dosm")
+}],
+"loop": true,
+"name": &"win_clown",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a0at1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ktqc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6b1u5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8gmcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mdtvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o1voi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ounxa")
+}],
+"loop": true,
+"name": &"idle_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_r5u4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_idvrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hc1r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a200m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yhw0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4tmt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6bjky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_x88cw")
+}],
+"loop": false,
+"name": &"losing_anim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_mt1mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_k2vmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uu3wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_h5qc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_rjk84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0prom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_haih1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_14rks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3cxit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jyt20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_cuu2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_j4lmn")
+}],
+"loop": true,
+"name": &"winning_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_srmfi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dyt1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1wnqq")
+}],
+"loop": false,
+"name": &"crowd",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8j84n"]
+texture = ExtResource("1_rcqtg")
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r0mih"]
+expand_margin_left = 8.0
+expand_margin_top = 10.0
+expand_margin_right = 9.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ale5i"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4cntb"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ixo4"]
+texture = ExtResource("1_vdqtx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhd4x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8srie"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0nbfp"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_232kw"]
+texture = ExtResource("1_vdqtx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g8tij"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_svdwu"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ri7v"]
+texture = ExtResource("1_vdqtx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a11hg"]
+texture = ExtResource("1_vdqtx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2q0tk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jktas"]
+texture = ExtResource("1_rcqtg")
 
 [node name="Main" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(120, 80)
+texture = ExtResource("1_ce2xk")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(224, 48)
+rotation = 0.785397
+sprite_frames = SubResource("SpriteFrames_dlo08")
+animation = &"idle_clown"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(124, 72)
+sprite_frames = SubResource("SpriteFrames_a0at1")
+animation = &"idle_animation"
+autoplay = "idle_animation"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_srmfi")
+animation = &"crowd"
+frame = 1
+frame_progress = 1.0
+
+[node name="Control" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ybme5")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.5
+offset_top = -25.0
+offset_right = 42.5
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/panel = SubResource("StyleBoxTexture_8j84n")
+
+[node name="Label" type="Label" parent="Control/PanelContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("35_n87k8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_r0mih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 120.0
+offset_right = 120.0
+offset_bottom = 4.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="ButtonOne" type="Button" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("35_n87k8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ale5i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4cntb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7ixo4")
+theme_override_styles/focus = SubResource("StyleBoxTexture_fhd4x")
+
+[node name="ButtonTwo" type="Button" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("35_n87k8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8srie")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0nbfp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_232kw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_g8tij")
+
+[node name="ButtonThree" type="Button" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("35_n87k8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_svdwu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6ri7v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a11hg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_2q0tk")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+texture_filter = 1
+clip_contents = true
+layout_mode = 1
+offset_top = 38.0
+offset_right = 4.0
+offset_bottom = 65.0
+scale = Vector2(2.24, 1.8)
+theme_override_styles/fill = SubResource("StyleBoxTexture_jktas")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_x1ppu")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("38_x3s8h")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("39_0qdyg")
